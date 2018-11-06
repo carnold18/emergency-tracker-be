@@ -1,51 +1,42 @@
 class ZonesController < ApplicationController
   before_action :set_zone, only: [:show, :update, :destroy]
 
-  # GET /zones
   def index
+    # zones = current_user.zones.push(current_user.zone)
     zones = Zone.all
-
     render json: zones
   end
 
-  # GET /zones/1
   def show
+    zone = Zone.find(params[:id])
     render json: zone
   end
 
-  # POST /zones
+  # /zones?search_term=77546
+  def search
+    render json: Zone.where("zip_code LIKE '%?%'", params[:search_term])
+  end
+
   def create
     zone = Zone.new(zone_params)
 
     if zone.save
-      render json: zone, status: :created, location: zone
-    else
-      render json: zone.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /zones/1
-  def update
-    if zone.update(zone_params)
       render json: zone
     else
-      render json: zone.errors, status: :unprocessable_entity
+      render json: zone.errors
     end
   end
 
-  # DELETE /zones/1
   def destroy
     zone.destroy
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_zone
       zone = Zone.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def zone_params
-      params.fetch(:zone, {})
+      params.permit(:country, :state, :zip_code)
     end
 end
