@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   post '/login', to: 'auth#create'
   get '/profile', to: 'users#profile'
+  post '/zoneUsers', to: 'zones#users'
   # get '/zones?search_term='
 
   # /zones?search_term=77546

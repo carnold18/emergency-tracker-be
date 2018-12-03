@@ -3,10 +3,12 @@ class UserZonesController < ApplicationController
 
   # GET /user_zones
   def index
-    if current_user.user_type > 0
-      zones = current_user.zones.push(current_user.zone)
-      render json: zones
-    end
+    user_zones = UserZone.all
+    render json: user_zones
+    # if current_user.user_type > 0
+    #   zones = current_user.zones.push(current_user.zone)
+    #   render json: zones
+    # end
   end
 
   # GET /user_zones/1

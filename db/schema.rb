@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 2018_10_29_211947) do
     t.string "state"
     t.string "zip_code"
     t.string "country"
+    t.float "lat"
+    t.float "lng"
     t.integer "user_type"
     t.integer "status"
     t.string "password_digest"

@@ -7,6 +7,11 @@ class ZonesController < ApplicationController
     render json: zones
   end
 
+  def users
+    zone_users = Zone.find(params[:id]).users.uniq
+    render json: zone_users
+  end
+
   def show
     zone = Zone.find(params[:id])
     render json: zone

@@ -3,6 +3,6 @@ class User < ApplicationRecord
     belongs_to :zone
     has_many :user_zones
     has_many :zones, through: :user_zones
-
+    has_many :users, through: :zones
     validates :email, uniqueness: true
 end
