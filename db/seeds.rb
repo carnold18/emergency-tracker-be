@@ -162,6 +162,56 @@ allZones = {
             state:"TX", 
             zip_code:"77030"
         },
+        {
+            country:"United States", 
+            state:"TX", 
+            zip_code:"77031"
+        },
+        {
+            country:"United States", 
+            state:"TX", 
+            zip_code:"77032"
+        },
+        {
+            country:"United States", 
+            state:"TX", 
+            zip_code:"77033"
+        },
+        {
+            country:"United States", 
+            state:"TX", 
+            zip_code:"77034"
+        },
+        {
+            country:"United States", 
+            state:"TX", 
+            zip_code:"77035"
+        },
+        {
+            country:"United States", 
+            state:"TX", 
+            zip_code:"77036"
+        },
+        {
+            country:"United States", 
+            state:"TX", 
+            zip_code:"77037"
+        },
+        {
+            country:"United States", 
+            state:"TX", 
+            zip_code:"77038"
+        },
+        {
+            country:"United States", 
+            state:"TX", 
+            zip_code:"77039"
+        },
+        {
+            country:"United States", 
+            state:"TX", 
+            zip_code:"77040"
+        },
     ]
 }
 
