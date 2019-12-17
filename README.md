@@ -26,3 +26,8 @@ After cloning down this repository, run the following commands from your termina
 
  This should fire up the database server with some preliminary data (from the seed file). If you do not have any other ports running on your machine, it should default to `http://localhost:3000/`. The Heroku equivalent link can be [here](https://emergency-tracker.herokuapp.com/).
 
+***
+
+## Example of a ActiveRecord Query
+![Zone User Query](./assets/zoneUserQuery.png)
+
